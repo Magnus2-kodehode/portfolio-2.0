@@ -1,0 +1,15 @@
+import React from 'react';
+
+import '../main.css';
+
+export default function ImageModal({ isOpen, src, alt, onClose }) {
+    if (!isOpen) return null;
+
+    return (
+        <div className="modal show">
+            <span className="close" onClick={onClose}>&times;</span>
+            <img className="modalContent" src={src} alt={alt}/>
+            <div id="caption">{alt}</div>
+        </div>
+    );
+};
