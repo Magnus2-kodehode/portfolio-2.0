@@ -50,13 +50,13 @@ export default function Projects() {
             <p className='text'>
               <a
                 className='link'
-                href='https://github.com/Magnus2-kodehode/portfolio-2'
+                href='https://github.com/Magnus2-kodehode/portfolio-2.0'
                 target='_blank'
               >
                 GitHub
               </a> | <a
                 className='link'
-                href='https://magnus2-kodehode.github.io/portfolio-2/'
+                href='https://magnus2-kodehode.github.io/portfolio-2.0'
                 target='_blank'
               >
                 GitHub pages

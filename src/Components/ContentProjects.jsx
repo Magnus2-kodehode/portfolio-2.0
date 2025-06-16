@@ -35,7 +35,7 @@ export default function ContentProjects() {
                     </div>
                     <div className='description'>
                         <div>
-                            <a className='link' href='https://github.com/Magnus2-kodehode/portfolio-2' target='_blank'>GitHub</a> | <a className='link' href='https://magnus2-kodehode.github.io/portfolio-2/' target='_blank'>GitHub pages</a>
+                            <a className='link' href='https://github.com/Magnus2-kodehode/portfolio-2.0' target='_blank'>GitHub</a> | <a className='link' href='https://magnus2-kodehode.github.io/portfolio-2.0' target='_blank'>GitHub pages</a>
                         </div>
                         Laget med HTML, CSS, JavaScript og React.
                     </div>
