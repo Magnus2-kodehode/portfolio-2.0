@@ -1,11 +1,11 @@
-import Nav from './Nav.jsx';
+import Nav from './Nav.jsx'
 
 export default function Header() {
 
-    return (
-        <div className="header">
-            <div className="nameHeader">Magnus Kjønnøy</div>
-            <Nav/>
-        </div>
-    );
-};
+  return (
+    <div className='header'>
+      <div className='header-name'>Magnus Kjønnøy</div>
+      <Nav/>
+    </div>
+  )
+}

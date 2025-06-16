@@ -2,9 +2,9 @@
 
 export default function ContactInfo() {
 
-    return (
-        <div className="contactInfo">
-            <p className="email">magnus.kjonnoy@gmail.com</p>
-        </div>
-    );
-};
+  return (
+    <div className='contact-info'>
+      <p className='email'>magnus.kjonnoy@gmail.com</p>
+    </div>
+  )
+}

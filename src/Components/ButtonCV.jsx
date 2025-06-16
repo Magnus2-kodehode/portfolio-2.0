@@ -1,14 +1,15 @@
-import Download from '../Functions/Download';
+import iconDocument from '/icon/document-black.png'
+import CV from '/document/Magnus Kjønnøy - CV.pdf'
 
 export default function ButtonCV() {
-    const handleClick = () => {
-        window.open('/document/Magnus Kjønnøy - CV.pdf', '_blank');
-    };
+  function handleClick() {
+    window.open(CV, '_blank')
+  }
 
-    return (
-        <button onClick={handleClick} className="buttonCV">
-            <img src="/icon/document-black.png"/>
-            CV
-        </button>
-    );
-};
+  return (
+    <button onClick={handleClick} className='button-cv'>
+      <img src={iconDocument}/>
+      CV
+    </button>
+  )
+}

@@ -4,9 +4,9 @@
   --background-container: rgba(0, 0, 0, 0.66);
   --shadow: rgb(0, 0, 0);
   --line: rgba(255, 255, 255, 0.5);
-  --text: rgb(230, 230, 230);
+  --text: rgb(240, 240, 240);
 
-  --lightmode-background: rgb(230, 230, 230);
+  --lightmode-background: rgb(240, 240, 240);
   --lightmode-background-body: rgb(255, 255, 255);
   --lightmode-background-container: rgba(255, 255, 255, 0.66);
   --lightmode-shadow: rgb(255, 255, 255);
@@ -26,7 +26,7 @@
 
 * {
   color: var(--text);
-  font-family: "Crimson Text", "Lusitana", Arial, Helvetica, sans-serif;
+  font-family: 'Lusitana', Arial, Helvetica, sans-serif;
   font-size: 20px;
   text-shadow: var(--shadow) 2px 2px 2px;
   letter-spacing: 2px;
@@ -38,7 +38,7 @@
 body {
   background: url(/image/universe_2.png) no-repeat fixed top;
   background-size: cover;
-  z-index: 1;
+  z-index: 0;
 }
 
 a {
@@ -59,40 +59,36 @@ a {
 .header {
   background: var(--background); 
   box-shadow: var(--shadow) 0px 0px 10px;
-  height: fit-content;
   width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.name {
-  color: var(--text-title);
-  font-family: "Crimson Pro";
-  font-size: 48px;
-  font-weight: 500;
-  height: fit-content;
-  width: fit-content;
-}
-
-.nameHeader {
-  /* border: black solid 1px; */
-  font-family: "Crimson Pro";
-  font-size: 64px;
+.header-name {
+  font-size: 56px;
   font-weight: 500;
   text-align: center;
-  height: fit-content;
-  max-height: 80px;
   width: fit-content;
+  height: fit-content;
   margin: 0px 10px;
+}
+
+.name {
+  color: var(--text-title);
+  font-size: 45px;
+  font-weight: 500;
+  width: fit-content;
+  height: fit-content;
 }
 
 .nav {
   /* border: black solid 1px; */
   color: var(--text);
-  height: fit-content;
   width: fit-content;
+  height: fit-content;
   padding: 5px;
   gap: 10px;
   display: flex;
@@ -101,7 +97,7 @@ a {
   align-items: center;
 }
 
-.navItem {
+.nav-item {
   /* border: black solid 1px; */
   font-size: 24px;
   font-weight: 400;
@@ -110,23 +106,23 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    color: var(--text-nav);
+    transform: scale(120%);
+  }
+
+  &:active {
+    color: var(--text-nav-active);
+  }
 }
 
-.navItem:hover {
-  color: var(--text-nav);
-  transform: scale(120%);
-}
-
-.navItem:active {
-  color: var(--text-nav-active);
-}
-
-.navActive {
+.nav-active {
   color: var(--text-nav);
   text-decoration: underline;
 }
 
-.navOptions {
+.nav-options {
   height: fit-content;
   width: 100%;
   padding: 5px;
@@ -137,7 +133,7 @@ a {
   justify-content: end;
 }
 
-.navOptionsButton {
+.nav-options-button {
   font-size: 16px;
   font-weight: 500;
   background: var(--background);
@@ -153,15 +149,14 @@ a {
   cursor: pointer;
 }
 
-.navOptionsButton img {
+.nav-options-button img {
   height: 30px;
 }
 
 .title {
   /* border: black solid 1px; */
   color: var(--text-title);
-  font-family: "Crimson Pro";
-  font-size: 48px;
+  font-size: 45px;
   text-align: center;
 }
 
@@ -170,14 +165,13 @@ a {
   font-size: 24px;
 }
 
-.projectTitle {
+.project-title {
   color: var(--text-title);
   font-size: 32px;
   text-align: center;
-  margin-bottom: 5px;
 }
 
-.containerMain {
+.container-main {
   font-size: 20px;
   background: var(--background-container);
   box-shadow: var(--shadow) 0px 0px 5px;
@@ -192,62 +186,53 @@ a {
   flex-direction: column;
 }
 
-.containerRow {
+.container-row {
   height: fit-content;
   gap: 15px;
   display: flex;
 }
 
-.containerColumn {
+.container-column {
   height: fit-content;
-  gap: 10px;
+  gap: 5px;
   display: flex;
   flex-direction: column;
 }
 
-.containerIntroduction {
+.container-introduction {
   height: fit-content;
-  gap: 15px;
+  gap: 25px;
   display: flex;
 }
 
-.containerSkills {
+.container-skills {
   height: fit-content;
-  width: fit-content;
+  padding: 0px 0px;
   margin-top: 10px;
   gap: 25px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .skill {
   font-size: 24px;
-  font-weight: bold;
   height: fit-content;
-  width: 125px;
-  margin-top: 10px;
-  gap: 10px;
+  gap: 25px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  cursor: pointer;
 }
 
 .skill img {
+  width: 100px;
   height: 100px;
   object-fit: contain;
 }
 
-.skill:hover {
+.skill img:hover {
   transform: scale(105%);
 }
 
-.skill:active {
-  transform: scale(103%);
-}
-
-.containerProject {
+.container-project {
   height: fit-content;
   row-gap: 15px;
   column-gap: 25px;
@@ -255,25 +240,17 @@ a {
   flex-direction: row;
 }
 
-.containerProjectText {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.text {
-  /* border: black solid 1px; */
-  height: fit-content;
-  margin-bottom: 10px;
-}
-
-.textWithImage {
-  /* border: black solid 1px; */
-  height: fit-content;
+.container-project-text {
   width: 50%;
 }
 
-.projectImage {
+.container-text {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
   box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 5px;
   border-radius: 20px;
   width: 50%;
@@ -281,11 +258,11 @@ a {
   cursor: pointer;
 }
 
-.projectImage:hover {
+.project-image:hover {
   transform: scale(103%);
 }
 
-.projectImage:active {
+.project-image:active {
   transform: scale(102%);
 }
 
@@ -296,30 +273,11 @@ a {
   flex-direction: column;
 }
 
-.myPicture {
+.my-picture {
   border-radius: 20px;
   height: 250px;
   width: 200px;
   object-fit: cover;
-}
-
-.containerContactInfo {
-  margin-top: 10px;
-  gap: 25px;
-  align-items: center;
-}
-
-.contactInfo {
-  row-gap: 10px;
-  column-gap: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.email {
-  font-size: 20px;
-  font-weight: bold;
 }
 
 .link {
@@ -333,7 +291,33 @@ a {
   color: var(--text-link-hover);
 }
 
-.buttonCV {
+.link-inactive {
+  color: rgb(150, 150, 150);
+  text-decoration: underline;
+  width: fit-content;
+  cursor: default;
+}
+
+.container-contact-info {
+  margin-top: 10px;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-info {
+  row-gap: 10px;
+  column-gap: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button-cv {
   color: var(--lightmode-text);
   font-size: 24px;
   font-weight: bold;
@@ -350,30 +334,38 @@ a {
   cursor: pointer;
 }
 
-.buttonCV img {
+.button-cv img {
   max-height: 30px;
   max-width: 30px;
   object-fit: contain;
 }
 
-.buttonCV:hover {
+.button-cv:hover {
   transform: scale(105%);
 }
 
-.buttonCV:active {
+.button-cv:active {
   transform: scale(103%);
 }
 
-.lineTop {
+.line-top {
   border: var(--line) solid;
   border-width: 1px 0px 0px 0px;
   padding-top: 25px;
 }
 
-.lineBottom {
+.line-bottom {
   border: var(--line) solid;
   border-width: 0px 0px 1px 0px;
   padding-bottom: 25px;
+}
+
+.hr {
+  color: var(--line);
+  background: var(--line);
+  height: 1px;
+  border: none;
+  /* margin: 20px 0px; */
 }
 
 .modal {
@@ -389,9 +381,10 @@ a {
   overflow: auto;
 }
   
-.modalContent {
-  width: 80%;
-  max-width: 1440px;
+.modal-content {
+  max-height: 80%;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
   display: block;
 }
@@ -408,7 +401,7 @@ a {
   display: block;
 }
   
-.modalContent,
+.modal-content,
 #caption {
   animation-name: zoom;
   animation-duration: 0.5s;
@@ -445,24 +438,33 @@ a {
 }
   
 @media only screen and (max-width: 700px) {
-  .modalContent {
-    width: 90%;
+  .modal-content {
+    width: 95%;
   }
 }
 
-@media (max-width: 950px) {
-  .nameHeader {
-    font-size: 56px;
+@media (max-width: 965px) {
+  * {
+    font-size: 18px;
   }
 
-  .containerIntroduction {
+  .header-name {
+    font-size: 50px;
+  }
+
+  .container-main {
+    padding: 25px;
+    margin: 50px 10px 50px 10px;
+  }
+
+  .container-introduction {
     height: fit-content;
     gap: 15px;
     display: flex;
     flex-direction: column;
   }
 
-  .myPicture {
+  .my-picture {
     align-self: center;
   }
 
@@ -470,18 +472,43 @@ a {
     align-self: center;
   }
 
-  .containerProject {
+  .email {
+    font-size: 18px;
+  }
+
+  .skill,
+  .button-cv {
+    font-size: 20px;
+  }
+
+  .container-skills {
+    padding: 0px;
+  }
+
+  .skill img {
+    height: 80px;
+  }
+
+  .button-cv img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .container-project {
     margin-top: 15px;
     flex-direction: column;
     align-items: center;
   }
 
-  .containerProjectText {
+  .container-project-text {
     width: 100%;
   }
 
-  .projectImage {
+  .project-image {
     width: 100%;
-    max-width: 500px;
   }
 }
